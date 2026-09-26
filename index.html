@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<title>Parallel Paths</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="stage">
+  <canvas id="game" width="1280" height="720"></canvas>
+
+  <div id="hud">
+    <div id="distance"></div>
+  </div>
+
+  <div id="caption" class="hidden">
+    <div class="caption-card">
+      <h2 id="caption-title"></h2>
+      <p id="caption-body"></p>
+      <div class="caption-hint">press <b>E</b> or tap to continue</div>
+    </div>
+  </div>
+
+  <div id="ending" class="hidden">
+    <div class="ending-inner">
+      <h1 id="ending-title"></h1>
+      <div id="ending-body"></div>
+    </div>
+  </div>
+
+  <div id="title-screen">
+    <div class="title-inner">
+      <h1>Parallel Paths</h1>
+      <p class="subtitle">a walk through everything so far</p>
+      <button id="start-btn">begin</button>
+      <div class="controls-hint">
+        <span class="desktop-only">← → walk &nbsp;·&nbsp; E interact &nbsp;·&nbsp; ↑ jump &nbsp;·&nbsp; K kiss</span>
+        <span class="touch-only">arrows to walk, ♥ for a kiss</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="touch-controls" class="hidden">
+    <button class="tc" id="tc-left" aria-label="walk left">←</button>
+    <button class="tc" id="tc-right" aria-label="walk right">→</button>
+    <button class="tc" id="tc-jump" aria-label="jump">↑</button>
+    <button class="tc tc-heart" id="tc-kiss" aria-label="kiss">♥</button>
+    <button class="tc tc-act" id="tc-act" aria-label="interact">●</button>
+  </div>
+</div>
+
+<script src="js/util.js"></script>
+<script src="js/world.js"></script>
+<script src="js/entities.js"></script>
+<script src="js/props.js"></script>
+<script src="js/cutscene.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
